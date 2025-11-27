@@ -1,0 +1,34 @@
+[project]
+name = "docai-toolkit"
+version = "0.1.0"
+description = "Local OCR + Markdown + RAG toolkit with optional Hugging Face endpoints."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Alexander Alten" }
+]
+dependencies = [
+  "PyPDF2",
+  "reportlab",
+  "pytest",
+  "langchain",
+  "langchain-community",
+  "transformers",
+  "accelerate",
+  "bitsandbytes",
+  "sentence-transformers",
+  "huggingface-hub",
+  "faiss-cpu",
+  "pytesseract",
+  "pdf2image"
+]
+
+[project.urls]
+Homepage = "https://github.com/alo/docai"
+
+[tool.setuptools.packages.find]
+include = ["docai_toolkit*"]
+
+[project.scripts]
+docai-viewer = "pdf_viewer_app:main"
