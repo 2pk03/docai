@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 0.1.3
+### Added
+- Docker workflow now pushes images only on tags and publishes to GHCR (optional Docker Hub) with tag-based naming.
+- PyPI workflow now only runs on tags, syncs version from tag, and skips existing uploads.
+- GitHub Release automation on tagged pushes (uses changelog as body).
+
+### Changed
+- Fixed YAML indentation in workflows to satisfy GitHub Actions parser.
+
 ## 0.1.2
 ### Added
 - GHCR publishing in Docker workflow and tag-only image pushes; PyPI workflow syncs version from tag and skips existing uploads.

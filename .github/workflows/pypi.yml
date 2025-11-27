@@ -12,6 +12,7 @@ permissions:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,7 +40,7 @@ version = "${{ github.ref_name }}".removeprefix("v")
 data["project"]["version"] = version
 pyproject.write_text(tomli_w.dumps(data), encoding="utf-8")
 print("Set version to", version)
-PY
+          PY
         shell: bash
 
       - name: Build wheel and sdist
