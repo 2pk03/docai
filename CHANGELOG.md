@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.1.3.1
+### Changed
+- pypi push fixed
+- project URL fixed
+
 ## 0.1.3
 ### Added
 - Docker workflow now pushes images only on tags and publishes to GHCR (optional Docker Hub) with tag-based naming.
