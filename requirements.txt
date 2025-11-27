@@ -11,3 +11,4 @@ huggingface-hub
 faiss-cpu
 pytesseract
 pdf2image
+tomli-w
