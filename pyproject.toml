@@ -25,7 +25,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/alo/docai"
+Homepage = "https://github.com/2pk03/docai"
 
 [tool.setuptools.packages.find]
 include = ["docai_toolkit*"]
