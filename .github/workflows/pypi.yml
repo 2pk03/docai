@@ -30,16 +30,16 @@ jobs:
       - name: Sync version from tag
         run: |
           python - <<'PY'
-import tomllib
-from pathlib import Path
-import tomli_w
+          import tomllib
+          from pathlib import Path
+          import tomli_w
 
-pyproject = Path("pyproject.toml")
-data = tomllib.loads(pyproject.read_text())
-version = "${{ github.ref_name }}".removeprefix("v")
-data["project"]["version"] = version
-pyproject.write_text(tomli_w.dumps(data), encoding="utf-8")
-print("Set version to", version)
+          pyproject = Path("pyproject.toml")
+          data = tomllib.loads(pyproject.read_text())
+          version = "${{ github.ref_name }}".removeprefix("v")
+          data["project"]["version"] = version
+          pyproject.write_text(tomli_w.dumps(data), encoding="utf-8")
+          print("Set version to", version)
           PY
         shell: bash
 
