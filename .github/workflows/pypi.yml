@@ -28,17 +28,15 @@ jobs:
 
       - name: Sync version from tag
         run: |
-          VERSION=${GITHUB_REF_NAME#v}
           python - <<'PY'
 import tomllib
 from pathlib import Path
+import tomli_w
 
 pyproject = Path("pyproject.toml")
 data = tomllib.loads(pyproject.read_text())
 version = "${{ github.ref_name }}".removeprefix("v")
 data["project"]["version"] = version
-
-import tomli_w  # lightweight writer
 pyproject.write_text(tomli_w.dumps(data), encoding="utf-8")
 print("Set version to", version)
 PY

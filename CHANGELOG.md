@@ -1,5 +1,15 @@
 # Changelog
 
+# Changelog
+
+## 0.1.2
+### Added
+- GHCR publishing in Docker workflow and tag-only image pushes; PyPI workflow syncs version from tag and skips existing uploads.
+- Docker image runs as non-root, includes Tk/ocr deps, and README documents macOS XQuartz steps for GUI in Docker.
+
+### Changed
+- Default Docker CMD launches the viewer; README clarifies active development, HF onboarding, and Docker usage.
+
 ## 0.1.0
 ### Added
 - New `docai_toolkit` package with OCR (local Tesseract or remote endpoint), embeddings/indexing (local or remote), and chat over FAISS.
